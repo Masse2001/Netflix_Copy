@@ -1,0 +1,22 @@
+//Page d'accueil (tous les films)
+
+.movies__grid{
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-family: $titleFont;
+    color: white;
+    .movies__current__event{
+        margin-left: 2px;
+        justify-content: space-around;
+        &__title{
+            font-weight: 500;
+            font-size: medium;
+        }
+        &__list{
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+}

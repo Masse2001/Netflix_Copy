@@ -1,0 +1,38 @@
+.header {
+    &__main {
+        background-color: black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo {
+        img {
+            width: 20%;
+            height: 20%;
+        }
+    }
+    &__nav {
+        .nav {
+            &__list {
+                display: flex;
+                align-items: center;
+                list-style: none;
+            }
+            &__item {
+                margin: 0px 20px;
+            }
+            &__link {
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 20px;
+                color: $primaryColor;
+                &:hover {
+                    color: $primaryColor;
+                }
+            }
+        }
+        // .nav__list {}
+        // .nav__item {}
+        // .nav__link {}
+    }
+}

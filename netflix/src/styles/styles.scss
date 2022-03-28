@@ -1,0 +1,17 @@
+//Helpers
+@import './helpers/variables';
+//Layout
+@import './layout/header';
+@import './layout/footer';
+//Themes
+@import './themes/button';
+@import './themes/home';
+@import './themes/input';
+@import './themes/accueil';
+@import './themes/title';  
+@import './themes/movies';// page d'accueils pour les films
+@import './themes/movie'; // component
+@import './themes/movieCard';//overlay du film
+//tailwin.css
+
+

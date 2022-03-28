@@ -1,0 +1,17 @@
+// Affichage de chaque film
+.movie__card {
+    justify-content: space-around;
+    width: 25%;
+    margin: 20px;
+    font-family: $titleFont;
+    color: white;
+    .movie__img {
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .movie__data {
+        font-size: 12px;
+    }
+}

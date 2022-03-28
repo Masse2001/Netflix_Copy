@@ -1,0 +1,28 @@
+.btn {
+    border: none;
+    padding: 15px 20px;
+    background-color: red;
+    text-transform: uppercase;
+    transition: 0.3s all;
+    &__color {
+        &-black {
+            background: black;
+            color: red;
+            &:hover {
+                background: red;
+                border: 1px solid black;
+                color: black;
+                transition: 0.3s all;
+            }
+        }
+        &-red {
+            border: 1px solid red;
+            color: white;
+            &:hover {
+                background: white;
+                color: red;
+                transition: 0.3s all;
+            }
+        }
+    }
+}
