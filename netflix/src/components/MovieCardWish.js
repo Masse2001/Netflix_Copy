@@ -6,26 +6,8 @@ import { useState } from "react";
 
 
 
-const MovieCard = (props) => { 
-
-  const [isActive, setIsActive]=useState(false);
-
-  const addToWishlist = (element) =>{
-    const wishArray = [];
-    if (localStorage.getItem('wishlist')){
-      const localStorageWishlist = JSON.parse(localStorage.getItem('wishlist'));
-      localStorageWishlist.forEach( movie => {
-        wishArray.push(movie)
-      });
-      wishArray.push(element);
-      console.log(wishArray);
-      localStorage.setItem('wishlist', JSON.stringify(wishArray));
-    }
-    else{
-      wishArray.push(element);
-      localStorage.setItem('wishlist', JSON.stringify(wishArray));
-    }
-  }
+const MovieCardWish = (props) => { 
+    const [isActive, setIsActive]=useState(false);
 
   return ( 
      <>
@@ -40,8 +22,8 @@ const MovieCard = (props) => {
               <div className="icon__play" >
                 <span>Play</span>
               </div>
-              <div className="icon__add" onClick={()=> addToWishlist(props.movie) }>
-                <span>Add</span>
+              <div className="icon__add" onClick={()=> console.log("Retivré") }>
+                <span>taken</span>
               </div>
               <div className="icon__down" onClick={() => {setIsActive(!isActive); console.log(isActive)}}>
                 <span>Info</span>
@@ -53,4 +35,4 @@ const MovieCard = (props) => {
      </> 
      ) 
 }
-export default MovieCard;
+export default MovieCardWish;

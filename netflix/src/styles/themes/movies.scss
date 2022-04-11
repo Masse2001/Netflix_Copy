@@ -1,22 +1,35 @@
 //Page d'accueil (tous les films)
-
-.movies__grid{
-    background-color: black;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+.banner{
+    background-color:black;
     font-family: $titleFont;
     color: white;
-    .movies__current__event{
-        margin-left: 2px;
-        justify-content: space-around;
-        &__title{
-            font-weight: 500;
-            font-size: medium;
-        }
-        &__list{
-            display: flex;
-            flex-wrap: wrap;
+    padding: 20px;
+    &__title{
+        font-size: 200px;
+    }
+    &__description{
+        margin-left: 30px;
+        padding-top: 140px;
+        height: 190px;
+    }
+    &__img{
+        .img{
+            size: cover;
+            position: center center;
+            object-fit: contain;
+            height: 500px;
+
         }
     }
 }
+
+
+.row{
+    display: flex;
+}
+/*.Movie__Card:hover {
+    .card__footer{
+        animation: apparitionFooter 0.3s forwards;
+    }
+    transform: scale(1.5) !important;
+}*/

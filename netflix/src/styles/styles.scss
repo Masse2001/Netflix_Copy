@@ -10,8 +10,11 @@
 @import './themes/accueil';
 @import './themes/title';  
 @import './themes/movies';// page d'accueils pour les films
-@import './themes/movie'; // component
-@import './themes/movieCard';//overlay du film
+@import './themes/movieCard.scss'; // Carte de chaque film
+@import './themes/movieModal.scss'; // modal de chaque film
+@import './themes/banner.scss';
+@import './themes/movie.scss';
+@import './themes/login.scss'
 //tailwin.css
 
 

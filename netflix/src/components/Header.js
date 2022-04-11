@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import Link from "next/link";
 import netflix from "../public/assets/netflix.png";
 import Button from "./Button";
+import moviesSevices from "../services/movies.sevices";
+import { useState } from "react";
 
 const Header = () => {
      return (
@@ -12,10 +14,30 @@ const Header = () => {
             <nav className="header__nav">
                 <ul className="nav__list">
                     <li className="nav__item">
-                    <li>
-                        <Button type="button" classes="btn btn__color-red" function={() => console.log("islogged")} title="S'identidier" />
+                        <Link href="/home">
+                            <a className="nav__link">Accueil</a>
+                        </Link>
+                    </li><li className="nav__item">
+                        <Link href="/movie">
+                            <a className="nav__link">Films</a>
+                        </Link>
                     </li>
+                    <li className="nav__item">
+                        <Link href="/wishlist">
+                            <a className="nav__link">wishlist</a>
+                        </Link>
                     </li>
+                    <li className="nav__item">
+                        <li>
+                            <Link href="/login">
+                                <button type="button" className="btn btn__color-red" title="S'identidier">
+                                    S'IDENTIFIER
+                                </button>
+                            </Link>
+                            
+                        </li>
+                    </li>
+                    
                 </ul>
             </nav>
          </header>
