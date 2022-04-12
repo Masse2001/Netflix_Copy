@@ -1,7 +1,6 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
 import moviesSevices from '../services/movies.sevices';
-import MovieModal from './MovieModal';
 
 
 const Banner = () =>{

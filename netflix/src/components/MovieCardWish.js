@@ -2,6 +2,7 @@
 import MovieModal from "./MovieModal";
 import react from "react";
 import { useState } from "react";
+import { useEffect } from "react";
 
 
 
@@ -9,6 +10,17 @@ import { useState } from "react";
 const MovieCardWish = (props) => { 
     const [isActive, setIsActive]=useState(false);
 
+
+    const [wishlist, setWishlist] = useState();
+    useEffect(() => {
+      setWishlist(JSON.parse(localStorage.getItem("whislist")) || []);
+    }, []);
+
+    const doAction = (movie) =>{
+      const filteredMovie=wishlist.filter((item) => item.id = movie.id);
+      localStorage.setItem('wishlist', JSON.stringify(filteredMovie));
+      setWishlist(filteredMovie);
+  }
   return ( 
      <>
         <div className="movie__card">
@@ -22,7 +34,7 @@ const MovieCardWish = (props) => {
               <div className="icon__play" >
                 <span>Play</span>
               </div>
-              <div className="icon__add" onClick={()=> console.log("Retivré") }>
+              <div className="icon__add" onClick={()=> doAction(props.movie)}>
                 <span>taken</span>
               </div>
               <div className="icon__down" onClick={() => {setIsActive(!isActive); console.log(isActive)}}>

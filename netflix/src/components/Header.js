@@ -1,10 +1,6 @@
 import React, { useEffect } from "react";
 import Link from "next/link";
 import netflix from "../public/assets/netflix.png";
-import Button from "./Button";
-import moviesSevices from "../services/movies.sevices";
-import { useState } from "react";
-
 const Header = () => {
      return (
          <header className="header__main">
@@ -18,7 +14,7 @@ const Header = () => {
                             <a className="nav__link">Accueil</a>
                         </Link>
                     </li><li className="nav__item">
-                        <Link href="/movie">
+                        <Link href="/movies">
                             <a className="nav__link">Films</a>
                         </Link>
                     </li>

@@ -2,8 +2,6 @@ import react, {useEffect} from "react";
 import { useState } from "react";
 import MovieCard from "../../components/MovieCard";
 import moviesSevices from "../../services/movies.sevices";
-import Banner from "../../components/Banner";
-
 
 const Index = () => { 
   function getRandomInt(max) {
@@ -12,8 +10,6 @@ const Index = () => {
 
   var id=getRandomInt(50);// id=numéro de page qui corresponds à uns liste de films 
   console.log(id);
-  /*var idB=getRandomInt(10);
-  console.log(idB);*/
   const [films, setFilms] = useState();
     useEffect(()=> {
       moviesSevices.getPopularMovies(id+1)
@@ -38,7 +34,6 @@ const Index = () => {
 // <Banner/>
 return ( 
    <div>
-     
      <script src="https://kit.fontawesome.com/10cf215a0d.js" crossOrigin="anonymous"></script>
       <div className="movies__section"> 
         <h2>NETFLIX ORIGINAL</h2>

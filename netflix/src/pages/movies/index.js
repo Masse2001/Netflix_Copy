@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import moviesSevices from "../../services/movies.sevices";
-import Link from "next/dist/client/link";
 import MovieCard from "../../components/MovieCard";
 
 
@@ -46,11 +45,11 @@ const Index = () => {
         .then((data)=>{
             console.log(data.results);
             setFilms(data.results);
-            setFiltered(data.results);
         })
         .catch(err=>console.log(err))
     },[]);
     
+
 
 return ( 
    <div className="movies__genres">
@@ -63,9 +62,7 @@ return (
                                 {genres &&
                                     genres.map((genre) => (
                                     <li className="sous__menu__item">
-                                        <Link href="/home">
-                                            <a className="sous__menu__link">{genre.name}</a>
-                                        </Link>
+                                            <a className="sous__menu__link" onClick={()=>console.log('ok')}>{genre.name}</a>
                                     </li>
                                 ))}
                         </ul>
