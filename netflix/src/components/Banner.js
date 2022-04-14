@@ -1,7 +1,4 @@
 import React from 'react'
-import { useEffect, useState } from 'react';
-import moviesSevices from '../services/movies.sevices';
-
 
 const Banner = () =>{
     function getRandomInt(max) {
@@ -18,6 +15,7 @@ const Banner = () =>{
             data.results[
             getRandomInt(10)
         ])
+        console.log(movie);
     })
     .catch(err=>console.log(err))
     },[]);
@@ -33,6 +31,23 @@ const Banner = () =>{
 
   return (
       <>
+      <div className='banner'>
+      <img src={"https://image.tmdb.org/t/p/w500" + movie.backdrop_path} alt={movie.path} />
+      <div className='content'>
+            <div className='banner__title'>
+                <p className="">{movie.title}</p>
+            </div>
+            <div className='banner__description'>
+                <p>{truncateText(movie.overview, 100)}</p>
+            </div>
+            <div className='banner__footer'>
+                <button className='btn__banner'>Lecture</button>
+                <button className='btn__banner'onClick={() => {setIsActive(!isActive); console.log(isActive)}}>Plus d'Infos</button>
+                <MovieModal movie={movie} active={isActive} closefunction={() => {setIsActive(!isActive); console.log(isActive)}}/>
+            </div>
+      </div>
+      
+      </div>
       </>
   )
 }

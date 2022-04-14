@@ -8,6 +8,7 @@ const Index = () => {
     element={"name": obj.name, "age":obj.age, "city":obj.city, "prenom":"Lucas"}
 
     console.log(element);
+    
     return(
         <>
         </>

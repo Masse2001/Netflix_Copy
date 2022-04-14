@@ -17,7 +17,7 @@ const MovieCardWish = (props) => {
     }, []);
 
     const doAction = (movie) =>{
-      const filteredMovie=wishlist.filter((item) => item.id = movie.id);
+      const filteredMovie=wishlist.filter((item) => item.id != movie.id);
       localStorage.setItem('wishlist', JSON.stringify(filteredMovie));
       setWishlist(filteredMovie);
   }
